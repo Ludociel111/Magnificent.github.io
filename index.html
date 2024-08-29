@@ -3,40 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Website</title>
+    <title>Grandeur's Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My E-commerce Store</h1>
+        <h1>Welcome to Grandeur's Blog</h1>
+        <p>A glimpse into the life of Grandeur, a budding programmer and chess enthusiast.</p>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home">
-            <h2>Welcome to Our Store</h2>
-            <p>Discover amazing products below.</p>
-        </section>
-        <section id="shop">
-            <h2>Shop</h2>
-            <div class="product">
-                <img src="https://via.placeholder.com/150" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$19.99</p>
-                <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
-                <a href="https://www.printful.com/affiliate-link" target="_blank">Buy on Printful</a>
-            </div>
-            <!-- Add more products as needed -->
-        </section>
-    </main>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Grandeur, born on September 5th, 2007. I live with my parents, senior brother, and younger sister. I just graduated from secondary school and I'm about to enter university. I play chess, sing, and can play the keyboard, though I can't dance. I used to act in school dramas and I have a knack for flirting with girls I like!</p>
+        <div class="gallery">
+            <img src="images/pic1.jpg" alt="Picture 1">
+            <img src="images/pic2.jpg" alt="Picture 2">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <section id="counter">
+        <h2>Visitor Count</h2>
+        <p>Total Visitors: <span id="visitorCount">0</span></p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 My E-commerce Store</p>
+        <p>Grandeur's Blog © 2024 | Made with love and code.</p>
     </footer>
+
+    <div id="rateMePopup" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>Rate Me</h2>
+            <p>Please rate me from 1-10 and share your thoughts!</p>
+            <form id="rateForm">
+                <label for="rating">Rating (1-10):</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" required>
+                <br>
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
